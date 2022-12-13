@@ -1,0 +1,50 @@
+.language-container {
+    min-width: 60px;
+    display: block;
+    width: auto;
+    float: right;
+    height: 30px;
+    margin: 0;
+    margin: 15px 20px 0 0;
+    line-height: 28px;
+}
+
+.facebook{
+    width: 40px;
+    color: white;
+    transition: color ease 0.2s;
+    cursor: pointer;
+    position: absolute;
+    right: 100px;
+}
+
+.facebook:hover{
+    
+    color: #FFDCBB;
+}
+
+.language-selected {
+    width: 80px;
+    height: 30px;
+    color: white;  
+    padding-left: 5px;  
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.language-option {
+    position: relative;
+    width: 80px;
+    height: 30px;
+    background-color: white;
+    padding-left: 5px;
+    vertical-align: baseline;
+}
+
+
+.language-option:hover, .language-selected:hover {
+    background-color: #FFDCBB;
+    color: black;
+    cursor: pointer;
+}
