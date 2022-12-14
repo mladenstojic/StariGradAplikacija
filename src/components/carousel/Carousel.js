@@ -3,6 +3,7 @@ import './carousel.css';
 import CarouselDugme from './CarouselDugme.js';
 import Lista from './Lista.js'
 import Dimuse from '../../slike/dimuse_logo_white.png'
+import { Link } from 'react-router-dom';
 
 function Carousel({tekst, dugme}) {
 
@@ -76,8 +77,7 @@ function Carousel({tekst, dugme}) {
                         <span className='dimuse-naslov'>{tekst.dimuse}</span>
                         <h1 className='carousel-naslov'>{tekst.tekstPrekoNaslovneSlikenaslov}</h1>
                         <span className='carousel-podnaslov'>{tekst.tekstPrekoNaslovneSlikepodnaslov}</span>
-                        <a href='#igrica-container' className='obilazak'>{tekst.dugmeNaNaslovnojSlici}</a>
-                        
+                        <a href='http://localhost:3006' className='obilazak'>{tekst.dugmeNaNaslovnojSlici}</a>
                     </div>
                     <div className='naslovna-menu pocetna'></div>
                 
