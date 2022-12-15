@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import Tip1 from "../sadrzaj/Tip1.js";
 import Tip2 from "../sadrzaj/Tip2.js";
@@ -6,43 +5,36 @@ import StariGrad from "../../slike/naslovna.jpg";
 import GrbVojinovica from "../../slike/Grb-Vojinovica.png";
 import Nikola from "../../slike/nikola.jpg";
 import Carousel from "../carousel/Carousel.js";
+import { useTranslation } from 'react-i18next';
 
 function Pocetna({ tekst }) {
-  const [pocetnaTekst, setPocetnaTekst] = useState([]);
+  const { t } = useTranslation();
 
-  useEffect(() => {
-    const getTekst = async () => {
-      const izvuciTekst = await tekst;
-      setPocetnaTekst(izvuciTekst);
-    };
-
-    getTekst();
-  }, [tekst]);
   return (
     <>
-      <Carousel tekst={pocetnaTekst} dugme={true} />
+      <Carousel/>
       <article className="pocetna-strana">
-        <Tip1 naslov={pocetnaTekst.Naslov1} tekst={pocetnaTekst.Tekst1} />
+        <Tip1 naslov={t('stari_grad_citadel')} tekst={t('u_izvorima')} />
         <Tip2
-          dugme={pocetnaTekst.Dugme}
-          tekst={pocetnaTekst.Tekst3}
-          naslov={pocetnaTekst.Naslov3}
+          dugme={t('read_more_btn')}
+          tekst={t('homepage_about_naltomanovic')}
+          naslov={t('homepage_naltomanovic')}
           slika={Nikola}
           lokacija="/history/nikola-altomanovic"
         />
         <Tip2
-          dugme={pocetnaTekst.Dugme}
+          dugme={t('read_more_btn')}
           orjentacija="row-reverse"
-          tekst={pocetnaTekst.Tekst2}
-          naslov={pocetnaTekst.Naslov2}
+          tekst={t('homepage_subtitle2')}
+          naslov={t('homepage_title2')}
           slika={StariGrad}
           lokacija="/history/citadel"
         />
         <Tip2
-          dugme={pocetnaTekst.Dugme}
-          tekst={pocetnaTekst.Tekst4}
+          dugme={t('read_more_btn')}
+          tekst={t('homepage_subtitle4')}
           slika={GrbVojinovica}
-          naslov={pocetnaTekst.Naslov4}
+          naslov={t('homepage_title4')}
           lokacija="/history/vojinovic-family"
         />
       </article>

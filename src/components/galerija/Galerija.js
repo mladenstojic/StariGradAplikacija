@@ -1,9 +1,11 @@
 import {useState} from "react";
+import { useTranslation } from "react-i18next";
 import './galerija.css';
 import GalerijaLista from './GalerijaLista.js';
 import Modul from './Modul.js'
 
 function Galerija() {
+    const { t } = useTranslation();
 
     const [selektovanaSlika,setSelektovanaSlika] = useState(null);
     const [imageIndex,setImageIndex] = useState(null);
@@ -64,7 +66,7 @@ function Galerija() {
         <>
             <div className='nav-line'></div>
             <section className='galerija-container'>
-                <h1 className="naslov">Галерија</h1>
+                <h1 className="naslov">{t('gallery')}</h1>
                 <div className="galerija-wrapper">
                 {landscape.map((item, index) => {
                     return (
