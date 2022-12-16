@@ -89,7 +89,7 @@ function Carousel() {
         <span className="carousel-podnaslov">
           {t('carousel_subtitle')}
         </span>
-        <a href="http://localhost:3006" className="obilazak">
+        <a href="http://dimsue.github.io" className="obilazak">
           {t('3d_tour')}
         </a>
       </div>
